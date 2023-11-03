@@ -1,8 +1,8 @@
 package test.java;
 
 import org.testng.annotations.*;
-import pages.ChallangeOnePage;
-import pages.ChallangeTenPage;
+import main.java.pages.ChallangeOnePage;
+import main.java.pages.ChallangeTenPage;
 import main.java.utils.BrowserManager;
 import main.java.utils.Navigator;
 

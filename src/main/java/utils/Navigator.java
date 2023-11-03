@@ -1,8 +1,8 @@
 package main.java.utils;
 
-import pages.ChallangeOnePage;
-import pages.ChallangeTenPage;
-import pages.MailSendTest;
+import main.java.pages.ChallangeOnePage;
+import main.java.pages.ChallangeTenPage;
+import main.java.pages.MailSendTest;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
 import static main.java.utils.BrowserManager.browser;

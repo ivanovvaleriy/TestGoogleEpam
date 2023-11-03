@@ -4,7 +4,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import pages.ChallangeOnePage;
+import main.java.pages.ChallangeOnePage;
 import main.java.utils.BrowserManager;
 import main.java.utils.Navigator;
 import utils.UserDataCollection;
