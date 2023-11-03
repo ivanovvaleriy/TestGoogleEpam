@@ -1,4 +1,4 @@
-package pages;
+package main.java.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-import static utils.BrowserManager.browser;
+import static main.java.utils.BrowserManager.browser;
 
 public class ChallangeOnePage extends UserDataCollection {
 

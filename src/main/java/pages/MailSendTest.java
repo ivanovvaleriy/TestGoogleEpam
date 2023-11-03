@@ -1,11 +1,11 @@
-package pages;
+package main.java.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static utils.BrowserManager.browser;
+import static main.java.utils.BrowserManager.browser;
 
 public class MailSendTest {
 

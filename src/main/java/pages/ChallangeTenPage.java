@@ -1,10 +1,10 @@
-package pages;
+package main.java.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static utils.BrowserManager.browser;
-import static utils.BrowserManager.closeBrowser;
+import static main.java.utils.BrowserManager.browser;
+import static main.java.utils.BrowserManager.closeBrowser;
 
 public class ChallangeTenPage {
 
