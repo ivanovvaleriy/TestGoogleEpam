@@ -1,8 +1,10 @@
+package test.java;
+
 import org.testng.annotations.*;
 import pages.ChallangeOnePage;
 import pages.ChallangeTenPage;
-import utils.BrowserManager;
-import utils.Navigator;
+import main.java.utils.BrowserManager;
+import main.java.utils.Navigator;
 
 import javax.annotation.CheckReturnValue;
 

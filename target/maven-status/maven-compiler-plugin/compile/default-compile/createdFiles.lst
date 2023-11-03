@@ -1,0 +1,8 @@
+utils\BrowserManager.class
+utils\Navigator.class
+pages\ChallangeTenPage.class
+pages\ChallangeOnePage.class
+pages\ChallangeFourPage.class
+utils\UserModel.class
+pages\MailSendTest.class
+utils\UserDataCollection.class

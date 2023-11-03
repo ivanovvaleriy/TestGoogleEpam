@@ -1,10 +1,12 @@
+package test.java;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.ChallangeOnePage;
-import utils.BrowserManager;
-import utils.Navigator;
+import main.java.utils.BrowserManager;
+import main.java.utils.Navigator;
 import utils.UserDataCollection;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -12,10 +14,14 @@ import static org.testng.AssertJUnit.assertEquals;
 public class MainTest3 {
 
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void before() {
         BrowserManager.openBrowser();
     }
+
+    @BeforeSuite
+            (groups = {"smoke"})
+    public void smokeGroup(){System.setProperty("testGroup", "SMOKE CHECH");}
 
     @Test
 
@@ -55,7 +61,7 @@ public class MainTest3 {
 
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void mailOneSendTest() {
 
         var mailOneSendTest = Navigator.openGooglePage().sendusernameFieldValue("epamwebdriver1@gmail.com")
@@ -67,7 +73,7 @@ public class MainTest3 {
 
     }
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void closeBrowser() {
         BrowserManager.closeBrowser();
     }

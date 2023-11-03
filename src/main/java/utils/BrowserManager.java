@@ -1,4 +1,4 @@
-package utils;
+package main.java.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +9,8 @@ import java.util.Set;
 
 public class BrowserManager {
     public static WebDriver browser;
+
+
 
     public static void openBrowser() {
         System.setProperty("webdriver.chrome.driver", "I:/Projects/chromedriver.exe");

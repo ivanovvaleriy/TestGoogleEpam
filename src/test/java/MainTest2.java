@@ -1,3 +1,5 @@
+package test.java;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -5,10 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.List;
 import java.util.Random;
@@ -23,17 +22,21 @@ public class MainTest2 {
 ////*[contains(@class,'zA zE')]
     private WebDriver browser;
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void before() {
         System.setProperty("webdriver.chrome.driver", "I:/Projects/chromedriver.exe");
         browser = new ChromeDriver();
     }
-    @BeforeTest
+    @BeforeTest (alwaysRun = true)
     public void beforeTest() {
 
     }
 
-    @Test
+    @BeforeSuite
+            (groups = {"smoke"})
+    public void smokeGroup(){System.setProperty("testGroup", "SMOKE CHECH");}
+
+    @Test(groups = {"smoke"})
 
 
     public void challangeOneTest() throws InterruptedException {
@@ -110,7 +113,7 @@ public class MainTest2 {
 
     }
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void closeBrowser() {
         browser.quit();
     }

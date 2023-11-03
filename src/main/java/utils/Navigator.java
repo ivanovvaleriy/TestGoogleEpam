@@ -1,11 +1,11 @@
-package utils;
+package main.java.utils;
 
 import pages.ChallangeOnePage;
 import pages.ChallangeTenPage;
 import pages.MailSendTest;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
-import static utils.BrowserManager.browser;
+import static main.java.utils.BrowserManager.browser;
 
 public class Navigator {
     public static ChallangeOnePage openChallengeOnePage() {
