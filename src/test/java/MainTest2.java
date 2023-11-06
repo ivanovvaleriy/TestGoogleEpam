@@ -1,5 +1,6 @@
 package test.java;
 
+import main.java.utils.Navigator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,11 +22,13 @@ public class MainTest2 {
 ////*[contains(@class,'xY a4W')]
 ////*[contains(@class,'zA zE')]
     private WebDriver browser;
+    protected WebDriver driver;
 
     @BeforeMethod (alwaysRun = true)
     public void before() {
-        System.setProperty("webdriver.chrome.driver", "I:/Projects/chromedriver.exe");
-        browser = new ChromeDriver();
+       // System.setProperty("webdriver.chrome.driver", "I:/Projects/chromedriver.exe");
+       // browser = new ChromeDriver();
+        driver = Navigator.getDriver();
     }
     @BeforeTest (alwaysRun = true)
     public void beforeTest() {
@@ -42,6 +45,7 @@ public class MainTest2 {
     public void challangeOneTest() throws InterruptedException {
         Random random = new Random();
         int randomNumber = random.nextInt(10000);
+        driver.navigate().to("https://accounts.google.com/AccountChooser/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&theme=glif");
 
         browser.navigate().to("https://accounts.google.com/AccountChooser/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&theme=glif");
         browser.findElement(By.id("identifierId")).sendKeys("epamwebdriver1@gmail.com");
@@ -115,6 +119,7 @@ public class MainTest2 {
 
     @AfterMethod (alwaysRun = true)
     public void closeBrowser() {
-        browser.quit();
+     //   browser.quit()
+          Navigator.closeDriver();
     }
 }
